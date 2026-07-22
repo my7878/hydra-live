@@ -28,10 +28,16 @@ export default function AdminLogin() {
 
     setLoading(false);
 
-    if (error || !data) {
-      setError("بيانات الدخول غير صحيحة");
-      return;
-    }
+   if (error) {
+  console.log(error);
+  setError(error.message);
+  return;
+}
+
+if (!data) {
+  setError("لم يتم العثور على المستخدم");
+  return;
+}
 
     localStorage.setItem("admin_logged_in", "true");
     localStorage.setItem("admin_email", data.email);
