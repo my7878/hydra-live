@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
           target="_blank"
           className="rounded-lg bg-purple-600 px-5 py-2 hover:bg-purple-500"
         >
-          واتساب
+          <FaWhatsapp /> واتساب
         </a>
       </header>
 
@@ -56,12 +57,23 @@ export default function Home() {
           جودة حتى 4K
         </p>
 
-        <a
-          href="/order"
-          className="mt-10 rounded-xl bg-purple-600 px-8 py-4 text-lg hover:bg-purple-500"
-        >
-          اشترك الآن
-        </a>
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+
+  <a
+    href="/order"
+    className="rounded-xl bg-purple-600 px-8 py-4 text-lg font-bold transition hover:bg-purple-500"
+  >
+    🚀 اشترك الآن
+  </a>
+
+  <a
+    href="/track"
+    className="rounded-xl border border-purple-600 px-8 py-4 text-lg font-bold text-purple-400 transition hover:bg-purple-600 hover:text-white"
+  >
+    📦 تتبع الطلب
+  </a>
+
+</div>
 
         <div
           id="plans"
@@ -121,6 +133,15 @@ export default function Home() {
         </div>
 
       </section>
+<a
+  href="https://wa.me/201278470969"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-green-600 px-5 py-3 text-white font-bold shadow-lg transition-all duration-300 hover:bg-green-500 hover:scale-110"
+>
+  <FaWhatsapp size={24} />
+  <span>تواصل معنا</span>
+</a>
 
     </main>
   );
